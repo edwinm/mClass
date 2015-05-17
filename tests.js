@@ -35,6 +35,12 @@ test( "instanceof", function() {
 	ok( snake instanceof Animal );
 });
 
+test( "constructor", function() {
+	ok( snake.constructor === Animal );
+});
+
+
+
 // A class without private methods or members is much easier
 var Bird = newClass({
 	// inherit from another class
@@ -68,6 +74,12 @@ test( "overridden member", function() {
 
 test( "inherited method toString", function() {
 	ok( ''+dove == "I'm a dove with 2 legs saying tweet" );
+});
+
+// If you don't like new, you can use Object.create()
+var sparrow = Object.create( Bird.prototype, {specie: {value: "sparrow"}} );
+test( "Object.create()", function() {
+	ok( ''+sparrow == "I'm a sparrow with 2 legs saying tweet" );
 });
 
 // A class with private methods and members is a little bit more work
