@@ -1,12 +1,13 @@
-/*
-newClass 1.0
+/****************************************************
+ newClass 1.0
 
-Copyright 2013 Edwin Martin <edwin@bitstorm.org>
+ Copyright 2013 Edwin Martin <edwin@bitstorm.org>
 
-http://www.bitstorm.org
+ http://www.bitstorm.org
 
-License: MIT
- */
+ License: MIT
+
+ ****************************************************/
 
 function newClass(param) {
 	var i, definition = param;
