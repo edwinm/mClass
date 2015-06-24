@@ -20,6 +20,8 @@ MClass tries to stay close to the priciples of prototypal inheritance (in contra
 3. Economical memory consumption: an instance object only contains instance data, no methods or other data is copied
 	into the instance object
 
+## Examples
+
 See tests.js for examples of how to use mClass.
 
 ```javascript
@@ -144,6 +146,14 @@ test( "toString with super", function() {
 	ok( ''+minnow == "I'm a minnow with 0 legs saying blub and I can swim" );
 });
 ```
+
+## How to get mClass:
+
+`git clone https://github.com/edwinm/mClass.git`
+
+`npm install mclass`
+
+`bower install mclass`
 
 Possible features to add in the future: augmentation, interfaces and ES5 object methods support.
 
