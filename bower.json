@@ -1,8 +1,8 @@
 {
     "name": "mClass",
     "description": "Provides class like programming to JavaScript while staying close to prototypal inheritance.",
-    "version": "1.0.0",
-    "main": "./mclass.js",
+    "version": "1.0.1",
+    "main": "./mclass-min.js",
     "ignore": [],
     "keywords": ["OOP", "object oriented", "prototype", "prototypal", "inheritance"],
     "authors": [

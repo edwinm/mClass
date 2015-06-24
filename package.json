@@ -1,13 +1,27 @@
 {
   "name": "mclass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides class like programming to JavaScript while staying close to prototypal inheritance.",
-  "keywords": ["OOP", "object oriented", "prototype", "prototypal", "inheritance"],
+  "keywords": [
+    "OOP",
+    "object oriented",
+    "prototype",
+    "prototypal",
+    "inheritance"
+  ],
   "bugs": "https://github.com/edwinm/mClass/issues",
   "license": "MIT",
   "author": "Edwin Martin <edwin@bitstorm.org>",
   "repository": {
     "type": "git",
     "url": "https://github.com/edwinm/mClass.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-closure-compiler": "0.0.21",
+    "grunt-contrib-watch": "~0.5.3",
+    "closure-compiler": "^0.2.6",
+    "jquery": "^2.1.4",
+    "qunit": "^0.7.6"
   }
 }
