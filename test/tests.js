@@ -1,8 +1,8 @@
 /*
-How to use newClass
+How to use mClass
  */
 
-var Animal = newClass(function() {
+var Animal = mClass(function() {
 	// Private
 	var info = "Carl Linnaeus is known as the father of modern taxonomy.";
 
@@ -42,7 +42,7 @@ test( "constructor", function() {
 
 
 // A class without private methods or members is much easier
-var Bird = newClass({
+var Bird = mClass({
 	// inherit from another class
 	extends: Animal,
 	// Override public method and member
@@ -83,7 +83,7 @@ test( "Object.create()", function() {
 });
 
 // A class with private methods and members is a little bit more work
-var Fish = newClass(function() {
+var Fish = mClass(function() {
 	function calculateLegs() {
 		return 0;
 	}

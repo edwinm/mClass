@@ -1,8 +1,8 @@
 {
-    "name": "newClass",
+    "name": "mClass",
     "description": "Provides class like programming to JavaScript while staying close to prototypal inheritance.",
     "version": "1.0.0",
-    "main": "./newclass.js",
+    "main": "./mclass.js",
     "ignore": [],
     "keywords": ["OOP", "object oriented", "prototype", "prototypal", "inheritance"],
     "authors": [
@@ -10,7 +10,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/edwinm/newClass.git"
+        "url": "git://github.com/edwinm/mClass.git"
     },
     "dependencies": {
     }

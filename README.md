@@ -1,4 +1,4 @@
-# newClass
+# mClass
 
 Implementing class like functionality using prototypal inheritance.
 
@@ -13,21 +13,21 @@ Supported object oriented features:
 4. static methods and members
 5. calling parent methods and members (super)
 
-NewClass tries to stay close to the priciples of prototypal inheritance (in contrast to some other oop libraries):
+MClass tries to stay close to the priciples of prototypal inheritance (in contrast to some other oop libraries):
 
 1. The JavaScript keyword instanceof is fully supported
 2. Easy conversion from object to string with toString()
 3. Economical memory consumption: an instance object only contains instance data, no methods or other data is copied
 	into the instance object
 
-See tests.js for examples of how to use newClass.
+See tests.js for examples of how to use mClass.
 
 ```javascript
 /*
-How to use newClass
+How to use mClass
  */
 
-var Animal = newClass(function() {
+var Animal = mClass(function() {
 	// Private
 	var info = "Carl Linnaeus is known as the father of modern taxonomy.";
 
@@ -67,7 +67,7 @@ test( "constructor", function() {
 
 
 // A class without private methods or members is much easier
-var Bird = newClass({
+var Bird = mClass({
 	// inherit from another class
 	extends: Animal,
 	// Override public method and member
@@ -108,7 +108,7 @@ test( "Object.create()", function() {
 });
 
 // A class with private methods and members is a little bit more work
-var Fish = newClass(function() {
+var Fish = mClass(function() {
 	function calculateLegs() {
 		return 0;
 	}
@@ -147,4 +147,4 @@ test( "toString with super", function() {
 
 Possible features to add in the future: augmentation, interfaces and ES5 object methods support.
 
-NewClass is written by Edwin Martin and is licensed with the MIT license.
+MClass is written by Edwin Martin and is licensed with the MIT license.

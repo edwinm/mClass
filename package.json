@@ -1,0 +1,13 @@
+{
+  "name": "mclass",
+  "version": "1.0.0",
+  "description": "Provides class like programming to JavaScript while staying close to prototypal inheritance.",
+  "keywords": ["OOP", "object oriented", "prototype", "prototypal", "inheritance"],
+  "bugs": "https://github.com/edwinm/mClass/issues",
+  "license": "MIT",
+  "author": "Edwin Martin <edwin@bitstorm.org>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edwinm/mClass.git"
+  }
+}

@@ -1,7 +1,7 @@
 /****************************************************
- newClass 1.0
+ mClass 1.0
 
- Copyright 2013 Edwin Martin <edwin@bitstorm.org>
+ Copyright 2013-2015 Edwin Martin <edwin@bitstorm.org>
 
  http://www.bitstorm.org
 
@@ -9,7 +9,7 @@
 
  ****************************************************/
 
-function newClass(param) {
+function mClass(param) {
 	var i, definition = param;
 
 	if (typeof param == "function") {
