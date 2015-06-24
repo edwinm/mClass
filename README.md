@@ -20,6 +20,8 @@ MClass tries to stay close to the priciples of prototypal inheritance (in contra
 3. Economical memory consumption: an instance object only contains instance data, no methods or other data is copied
 	into the instance object
 
+The 'm' in mClass stands for module pattern, which is used to provide private variables and functions.
+
 ## Examples
 
 See tests.js for examples of how to use mClass.
