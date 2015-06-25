@@ -1,6 +1,6 @@
 {
   "name": "mclass",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Provides class like programming to JavaScript while staying close to prototypal inheritance.",
   "keywords": [
     "OOP",

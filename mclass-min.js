@@ -1,5 +1,5 @@
 /*
- mClass 1.0.1
+ mClass 1.0.3
 
  Copyright 2013-2015 Edwin Martin <edwin@bitstorm.org>
 
