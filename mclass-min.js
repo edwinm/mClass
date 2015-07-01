@@ -1,11 +1,11 @@
 /*
- mClass 1.0.3
+ mClass 1.1.0
 
- Copyright 2013-2015 Edwin Martin <edwin@bitstorm.org>
+ @copyright Copyright 2013-2015 Edwin Martin <edwin@bitstorm.org>
 
- https://github.com/edwinm/mClass
+ @see {@link https://github.com/edwinm/mClass|mClass}
 
- License: MIT
+ @license MIT
 */
-'use strict';function mClass(d){function c(){a.extends&&a.extends._definition.construct&&a.extends._definition.construct.apply(this,arguments);a.construct&&a.construct.apply(this,arguments)}function e(){this.constructor=c;for(b in a.public)this[b]=a.public[b];this._super=a.extends&&a.extends._definition.public}function f(){this.constructor=a.extends}var b,a=d;"function"==typeof d&&(a=d());a.extends&&a.extends._definition.public&&(f.prototype=a.extends.prototype,e.prototype=new f);c.prototype=new e;
-if(a.extends&&a.extends._definition.static)for(b in a.extends._definition.static)c[b]=a.extends._definition.static[b];for(b in a.static)c[b]=a.static[b];c._definition=a;c._super=a.extends&&a.extends._definition.public;return c};
+function mClass(a){function c(){a["extends"]&&a["extends"]._definition.construct&&a["extends"]._definition.construct.apply(this,arguments);a.construct&&a.construct.apply(this,arguments)}function d(){this.constructor=c;for(b in a["public"])this[b]=a["public"][b];this._super=a["extends"]&&a["extends"]._definition["public"]}function e(){this.constructor=a["extends"]}var b;"function"==typeof a&&(a=a());a["extends"]&&a["extends"]._definition["public"]&&(e.prototype=a["extends"].prototype,d.prototype=new e);
+c.prototype=new d;if(a["extends"]&&a["extends"]._definition["static"])for(b in a["extends"]._definition["static"])c[b]=a["extends"]._definition["static"][b];for(b in a["static"])c[b]=a["static"][b];c._definition=a;c._super=a["extends"]&&a["extends"]._definition["public"];return c};
