@@ -1,6 +1,6 @@
 {
   "name": "mclass",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Provides class like programming to JavaScript while staying close to prototypal inheritance.",
   "keywords": [
     "OOP",
@@ -23,6 +23,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "closure-compiler": "^0.2.6",
     "jquery": "^2.1.4",
-    "qunit": "^0.7.6"
+    "qunit": "^0.7.6",
+    "requirejs": "^2.1.18"
   }
 }

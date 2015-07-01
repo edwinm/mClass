@@ -1,5 +1,5 @@
 /**!
- @preserve mClass 1.1.0
+ @preserve mClass 1.2.0
 
  @copyright Copyright 2013-2015 Edwin Martin <edwin@bitstorm.org>
 
@@ -78,3 +78,15 @@ function mClass(definition) {
 		this.constructor = definition.extends;
 	}
 }
+
+// Support MD and CommonJS module loading
+if (typeof define === "function" && define.amd) {
+	define('mClass', function() {
+		return mClass;
+	});
+} else if (typeof module === "object" && module.exports) {
+	module.exports = mClass;
+}
+
+// ES6
+// export mClass
