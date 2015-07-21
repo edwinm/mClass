@@ -121,5 +121,54 @@ require(['mClass'], function(mClass) {
 		ok( ''+minnow == "I'm a minnow with 0 legs saying blub and I can swim" );
 	});
 
+	// Test augmentation
+
+	// You can only extend from one class, but augment your classes with other classes and objects
+
+	// Augment a object literal
+	var weightService = {
+		weight: 10,
+		getWeight: function() {
+			return this.weight;
+		}
+	};
+
+	// Augment another mClass instance. You can even use private variables
+	var Skin = mClass(function() {
+		var skin;
+
+		return {
+			public: {
+				setSkin: function(newSkin) {
+					skin = newSkin;
+				},
+				getSkin: function () {
+					return skin;
+				}
+			}
+		}
+	});
+
+	// A new class augmenting the object and class above
+	var Dog = mClass({
+		extends: Animal,
+		augments: [weightService, new Skin()],
+		public: {
+			sound: function() {
+				return "woof";
+			}
+		}
+	});
+
+	var dog = new Dog('dog');
+
+	test( "augment with object literal", function() {
+		ok( dog.getWeight() == 10 );
+	});
+
+	dog.setSkin('furry');
+	test( "augment with object literal", function() {
+		ok( dog.getSkin() == 'furry' );
+	});
 
 });

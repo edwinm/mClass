@@ -1,7 +1,7 @@
 /**!
- @preserve mClass 1.2.0
+ @preserve mClass 1.3.0
 
- @copyright Copyright 2013-2015 Edwin Martin <edwin@bitstorm.org>
+ @copyright Copyright 2013-2015 Edwin Martin
 
  @see {@link https://github.com/edwinm/mClass|mClass}
 
@@ -66,6 +66,11 @@ function mClass(definition) {
 	// Add public functions
 	function Link() {
 		this.constructor = Result;
+		for(i in definition.augments) {
+			for(var item in definition.augments[i]) {
+				this[item] = definition.augments[i][item];
+			}
+		}
 		for(i in definition.public) {
 			this[i] = definition.public[i];
 		}

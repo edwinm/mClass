@@ -1,13 +1,14 @@
 {
   "name": "mclass",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Provides class like programming to JavaScript while staying close to prototypal inheritance.",
   "keywords": [
     "OOP",
     "object oriented",
     "prototype",
     "prototypal",
-    "inheritance"
+    "inheritance",
+    "class"
   ],
   "bugs": "https://github.com/edwinm/mClass/issues",
   "license": "MIT",
