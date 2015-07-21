@@ -167,7 +167,7 @@ require(['mClass'], function(mClass) {
 	});
 
 	dog.setSkin('furry');
-	test( "augment with object literal", function() {
+	test( "augment with mClass instance", function() {
 		ok( dog.getSkin() == 'furry' );
 	});
 
