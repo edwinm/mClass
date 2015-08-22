@@ -2,7 +2,9 @@
 How to use mClass
  */
 
-require(['mClass'], function(mClass) {
+require(['../node_modules/qunitjs/qunit/qunit.js', '../mclass.js'], function(QUnit, mClass) {
+
+	QUnit.start();
 
 	var Animal = mClass(function() {
 		// Private
@@ -33,12 +35,12 @@ require(['mClass'], function(mClass) {
 
 	var snake = new Animal("snake");
 
-	test( "instanceof", function() {
-		ok( snake instanceof Animal );
+	QUnit.test( "instanceof", function(assert) {
+		assert.ok( snake instanceof Animal );
 	});
 
-	test( "constructor", function() {
-		ok( snake.constructor === Animal );
+	QUnit.test( "constructor", function(assert) {
+		assert.ok( snake.constructor === Animal );
 	});
 
 
@@ -58,30 +60,30 @@ require(['mClass'], function(mClass) {
 
 	var dove = new Bird("dove");
 
-	test( "instanceof", function() {
-		ok( dove instanceof Animal );
+	QUnit.test( "instanceof", function(assert) {
+		assert.ok( dove instanceof Animal );
 	});
 
-	test( "instanceof parent", function() {
-		ok( dove instanceof Bird );
+	QUnit.test( "instanceof parent", function(assert) {
+		assert.ok( dove instanceof Bird );
 	});
 
-	test( "overridden method", function() {
-		ok( dove.sound() == "tweet" );
+	QUnit.test( "overridden method", function(assert) {
+		assert.ok( dove.sound() == "tweet" );
 	});
 
-	test( "overridden member", function() {
-		ok( dove.legs == 2 );
+	QUnit.test( "overridden member", function(assert) {
+		assert.ok( dove.legs == 2 );
 	});
 
-	test( "inherited method toString", function() {
-		ok( ''+dove == "I'm a dove with 2 legs saying tweet" );
+	QUnit.test( "inherited method toString", function(assert) {
+		assert.ok( ''+dove == "I'm a dove with 2 legs saying tweet" );
 	});
 
 // If you don't like new, you can use Object.create()
 	var sparrow = Object.create( Bird.prototype, {specie: {value: "sparrow"}} );
-	test( "Object.create()", function() {
-		ok( ''+sparrow == "I'm a sparrow with 2 legs saying tweet" );
+	QUnit.test( "Object.create()", function(assert) {
+		assert.ok( ''+sparrow == "I'm a sparrow with 2 legs saying tweet" );
 	});
 
 // A class with private methods and members is a little bit more work
@@ -107,18 +109,18 @@ require(['mClass'], function(mClass) {
 	});
 
 // Test inherited static function
-	test( "inherited static function", function() {
-		ok( Fish.info() == "Carl Linnaeus is known as the father of modern taxonomy.");
+	QUnit.test( "inherited static function", function(assert) {
+		assert.ok( Fish.info() == "Carl Linnaeus is known as the father of modern taxonomy.");
 	});
 
 	var minnow = new Fish("minnow");
 
-	test( "inherited function using private function", function() {
-		ok( minnow.sound() == "blub" );
+	QUnit.test( "inherited function using private function", function(assert) {
+		assert.ok( minnow.sound() == "blub" );
 	});
 
-	test( "toString with super", function() {
-		ok( ''+minnow == "I'm a minnow with 0 legs saying blub and I can swim" );
+	QUnit.test( "toString with super", function(assert) {
+		assert.ok( ''+minnow == "I'm a minnow with 0 legs saying blub and I can swim" );
 	});
 
 	// Test augmentation
@@ -162,13 +164,13 @@ require(['mClass'], function(mClass) {
 
 	var dog = new Dog('dog');
 
-	test( "augment with object literal", function() {
-		ok( dog.getWeight() == 10 );
+	QUnit.test( "augment with object literal", function(assert) {
+		assert.ok( dog.getWeight() == 10 );
 	});
 
 	dog.setSkin('furry');
-	test( "augment with mClass instance", function() {
-		ok( dog.getSkin() == 'furry' );
+	QUnit.test( "augment with mClass instance", function(assert) {
+		assert.ok( dog.getSkin() == 'furry' );
 	});
 
 });

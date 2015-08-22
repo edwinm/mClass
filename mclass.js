@@ -1,5 +1,5 @@
 /**!
- @preserve mClass 1.3.0
+ @preserve mClass 1.4.0
 
  @copyright Copyright 2013-2015 Edwin Martin
 
@@ -86,7 +86,7 @@ function mClass(definition) {
 
 // Support MD and CommonJS module loading
 if (typeof define === "function" && define.amd) {
-	define('mClass', function() {
+	define(function() {
 		return mClass;
 	});
 } else if (typeof module === "object" && module.exports) {
