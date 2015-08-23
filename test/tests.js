@@ -2,7 +2,7 @@
 How to use mClass
  */
 
-require(['../node_modules/qunitjs/qunit/qunit.js', '../mclass.js'], function(QUnit, mClass) {
+require(['../node_modules/qunitjs/qunit/qunit', '../mclass'], function(QUnit, mClass) {
 
 	QUnit.start();
 
