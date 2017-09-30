@@ -11,6 +11,7 @@
     "class"
   ],
   "bugs": "https://github.com/edwinm/mClass/issues",
+  "main": "mclass-min.js",
   "license": "MIT",
   "author": "Edwin Martin <edwin@bitstorm.org>",
   "homepage": "http://www.bitstorm.org/javascript/mclass/",
